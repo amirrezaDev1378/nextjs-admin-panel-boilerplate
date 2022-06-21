@@ -1,3 +1,6 @@
+@use "../../styles/Home.module";
+
+
 .headerMain {
   width: 100%;
   user-select: none;
@@ -5,9 +8,52 @@
 
 .userIcon {
   img {
+
     border-radius: 50%;
     @media screen and (min-width: 250px) {
-
+      width: 60px;
     }
   }
+}
+
+.menu {
+  cursor: pointer !important;
+}
+
+.menuBox {
+  transition: 0.4s opacity, 0.8s width, 0.8s height;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 10;
+  top: 0;
+  border-right: #ee553b 2px solid;
+  border-radius: 0 25px 25px 0;
+}
+
+.menuBoxHidden {
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 100% !important;
+
+  button {
+    display: none!important;
+  }
+}
+
+.menuBoxVisible {
+  width: 50vw !important;
+  opacity: 1 !important;
+  height: 100% !important;
+}
+
+.menuCloseButton {
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.menuButtons {
+  width: 100%;
+  margin-top: 5px !important;
 }
