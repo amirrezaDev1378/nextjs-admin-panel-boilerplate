@@ -40,7 +40,7 @@ const ComparisonItem: React.FC<comparisonProps> = (props) => {
 };
 const Comparison: React.FC = () => {
     return (
-        <Stack direction={"column"}>
+        <Stack flexBasis={{sm:"50%"}} direction={"column"}>
             <Stack direction={"row"}>
                 <Typography>
                     Comparison

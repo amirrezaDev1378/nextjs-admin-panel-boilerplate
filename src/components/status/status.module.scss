@@ -1,12 +1,31 @@
+@use "../../styles/bs5-utilities.css";
+
 .statusMain {
   width: 100%;
 
-
+  > * {
+    flex-basis:100%;
+  }
+  @media screen and (min-width: 400px) {
+    > * {
+  flex-basis: 33.33333%;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    > * {
+  flex-basis: 33.33%;
+    }
+  }  @media screen and (min-width: 1200px) {
+    > * {
+  flex-basis: 15%;
+    }
+  }
 }
 
 .colorRed {
   color: #FF4B75 !important;
 }
+
 .colorGreen {
   color: #00E38C !important;
 }

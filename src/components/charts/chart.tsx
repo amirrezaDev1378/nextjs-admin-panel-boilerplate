@@ -43,7 +43,7 @@ const Chart: React.FC<ChartPropTypes> = (props) => {
     const color = chartData[props.country][0].color;
     return (
         <>
-            <Stack alignItems={"center"} justifyContent={"center"} direction={'column'}>
+            <Stack className={styles.chartFlex} alignItems={"center"} justifyContent={"center"} direction={'column'}>
                 <Typography variant={"h4"}>
                     {props.country}
 

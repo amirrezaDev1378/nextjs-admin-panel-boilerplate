@@ -2,7 +2,7 @@ import {NextComponentType} from "next";
 
 import React, {AnchorHTMLAttributes, useRef} from 'react';
 import {Button, Stack, Typography} from "@mui/material";
-import {menuIcon, userIcon} from "../../assets/";
+import {menuIcon, userIcon, largeMenuIcons} from "../../assets/";
 import styles from "./header.module.scss";
 
 import {Analytics, AnalyticsOutlined, AutoGraphOutlined, Close, DashboardCustomize, NotificationsActiveOutlined} from "@mui/icons-material";
@@ -21,14 +21,51 @@ const menuClickHandler = (e: React.MouseEvent<HTMLAnchorElement | SVGSVGElement>
 }
 
 const dashboardLinkSwitch = (): void => {
-    alert("Sorry but this feature is not yet available 😔");
+    alert("Sorry, this feature is not yet available 😔");
 }
 
 const Header: NextComponentType = () => {
     const menuBoxRef = useRef(null)
     return (
         <>
-            <Stack alignItems={"center"} justifyContent={"space-around"} className={styles.headerMain} direction={'row'}>
+            <Stack direction={"column"} alignItems={"center"} justifyContent={"start"} className={`${styles.lgMenu}`}>
+                <Button className={`${styles.lgButtons} ${styles.lgButtonsActive}`}>
+                    <Stack alignItems={"center"} direction={"column"}>
+
+                        <img src={largeMenuIcons.dashboard.src} alt="dashboard" className={""}/>
+                        Dashboard
+                    </Stack>
+                </Button>
+
+                <Button className={`${styles.lgButtons}`}>
+                    <Stack alignItems={"center"} direction={"column"}>
+                        <img src={largeMenuIcons.analytics.src} alt="analytics" className={""}/>
+                        Analytics
+                    </Stack>
+
+                </Button>
+                <Button className={`${styles.lgButtons}`}>
+                    <Stack alignItems={"center"} direction={"column"}>
+                        <img src={largeMenuIcons.trading.src} alt="trading" className={""}/>
+                        Trading
+                    </Stack>
+
+                </Button>
+
+                <Button className={`${styles.lgButtons}`}>
+                    <Stack alignItems={"center"} direction={"column"}>
+                        <img src={largeMenuIcons.notification.src} alt="notification" className={""}/>
+                        notifications
+                    </Stack>
+
+                </Button>
+
+
+            </Stack>
+
+            <Stack alignItems={"center"} justifyContent={{xs: "space-around", md: "start"}} className={styles.headerMain} direction={'row'}>
+
+
                 <div className="">
                     <a
                         onClick={(e) => menuClickHandler(e, menuBoxRef)}
@@ -71,6 +108,8 @@ const Header: NextComponentType = () => {
                 </Button>
 
             </div>
+
+
         </>
     );
 }

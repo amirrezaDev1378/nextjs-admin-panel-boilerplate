@@ -22,7 +22,7 @@ const TeamMember:React.FC<TeamMemberProps> = (props) => {
 
 const Members:React.FC = (props) => {
     return (
-        <Stack direction={"column"}>
+        <Stack flexBasis={{sm:"50%"}} direction={"column"}>
             <Stack direction={"row"}>
                 <Typography>
                     Team Members

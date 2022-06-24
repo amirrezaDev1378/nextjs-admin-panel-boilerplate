@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.scss'
-import {Button} from "@mui/material";
+import {Button, Stack} from "@mui/material";
 import Header from "../components/header/header";
 import Status from "../components/status/status";
 import ChartBox from "../components/charts/chartBox";
@@ -16,8 +16,12 @@ const IndexPage: NextPage = () => {
             <Header/>
             <Status/>
             <ChartBox />
-            <Comparison />
-            <Members />
+            <Stack width={"100%"} direction={{xs:"column", sm:"row"}}>
+
+                <Comparison/>
+                <Members/>
+
+            </Stack>
         </div>
     )
 }

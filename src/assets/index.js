@@ -17,6 +17,14 @@ import annaIconPng from "./icons/anna.png";
 import andrewIconPng from "./icons/andrew.png";
 import markIconPng from "./icons/mark.png";
 import johannaIconPng from "./icons/johanna.png";
+
+
+import analyticsIconSvg from "./icons/analytics.svg";
+import dashboardIconSvg from "./icons/dashboard.svg";
+import notificationIconSvg from "./icons/notification.svg";
+import tradingIconSvg from "./icons/trading.svg";
+
+
 /*
 * icons
 */
@@ -42,4 +50,12 @@ export const userIcons={
     andrew:andrewIconPng,
     mark:markIconPng,
     johanna:johannaIconPng
+}
+
+export const largeMenuIcons={
+    analytics:analyticsIconSvg,
+    dashboard:dashboardIconSvg,
+    notification:notificationIconSvg,
+    trading:tradingIconSvg
+
 }

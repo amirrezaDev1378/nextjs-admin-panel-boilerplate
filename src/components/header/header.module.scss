@@ -1,12 +1,18 @@
 @use "../../styles/Home.module";
-
+@use "../../styles/bs5-utilities.css";
 
 .headerMain {
   width: 100%;
   user-select: none;
+
 }
 
 .userIcon {
+  @media screen and (min-width : 900px ){
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
   img {
 
     border-radius: 50%;
@@ -18,6 +24,8 @@
 
 .menu {
   cursor: pointer !important;
+  @extend .d-md-none;
+
 }
 
 .menuBox {
@@ -28,6 +36,9 @@
   top: 0;
   border-right: #ee553b 2px solid;
   border-radius: 0 25px 25px 0;
+  @extend .d-md-none;
+
+
 }
 
 .menuBoxHidden {
@@ -36,7 +47,7 @@
   height: 100% !important;
 
   button {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -57,3 +68,37 @@
   width: 100%;
   margin-top: 5px !important;
 }
+
+.lgMenu {
+  @extend .d-none, .d-md-flex;
+  background-color: #ffffff;
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 5px 0 31px -4px rgba(30, 30, 60, 0.11);
+
+  .lgButtons {
+    margin: 5px 15px;
+    padding: 10px;
+    color: #8990AD;
+    height: 12.5vw;
+    width: 12.5vw;
+
+    img {
+      width: 40%;
+      padding: 5px;
+    }
+  }
+
+  .lgButtonsActive {
+    box-shadow: 0 3px 30px 2px rgba(30, 30, 60, 0.24);
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #000;
+  }
+}
+
