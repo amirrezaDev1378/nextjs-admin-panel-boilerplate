@@ -5,11 +5,11 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    font-family: Poppins, sans-serif !important;
+    font-family: Poppins, sans-serif;
     background-color: #FCFCFC;
 }
 p,h1,h2,h3,h4,h5,h6,span{
-    font-family: Poppins, sans-serif !important;
+    font-family: Poppins, sans-serif;
 
 }
 * {

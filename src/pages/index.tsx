@@ -16,10 +16,10 @@ const IndexPage: NextPage = () => {
             <Header/>
             <Status/>
             <ChartBox />
-            <Stack width={"100%"} direction={{xs:"column", sm:"row"}}>
+            <Stack padding={"0 25px"} width={"100%"} direction={{xs:"column", sm:"row"}}>
 
-                <Comparison/>
                 <Members/>
+                <Comparison/>
 
             </Stack>
         </div>

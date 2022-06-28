@@ -11,8 +11,8 @@ interface comparisonProps {
 
 const ComparisonItem: React.FC<comparisonProps> = (props) => {
     return (
-        <Stack justifyContent={"center"} direction={"column"}>
-            <Stack direction={"row"} justifyContent={"start"}>
+        <Stack spacing={1} justifyContent={"center"} direction={"column"}>
+            <Stack spacing={2} direction={"row"} justifyContent={"start"}>
                 <img src={props.icon} alt={props.country}/>
                 <Typography>
                     {props.country}
@@ -20,7 +20,7 @@ const ComparisonItem: React.FC<comparisonProps> = (props) => {
 
             </Stack>
 
-            <Stack direction={"row"}>
+            <Stack  direction={"row"}>
                 <LinearProgress
                     classes={{
                         root: styles.muiProgress,
@@ -41,21 +41,21 @@ const ComparisonItem: React.FC<comparisonProps> = (props) => {
 const Comparison: React.FC = () => {
     return (
         <Stack flexBasis={{sm:"50%"}} direction={"column"}>
-            <Stack direction={"row"}>
+            <Stack padding={"5px 20px"} justifyContent={"space-between"} direction={"row"}>
                 <Typography>
                     Comparison
                 </Typography>
-                <Typography>
+                <Typography className={styles.viewAll} component={"a"} color={"primary.main"}>
                     View All
                 </Typography>
             </Stack>
 
             <div className={styles.comparisons}>
-                <ComparisonItem country={"USA"} percentage={50} icon={countryIcons.usa.src}/>
+                <ComparisonItem country={"USA"} percentage={70} icon={countryIcons.usa.src}/>
                 <br/>
-                <ComparisonItem country={"Italy"} percentage={50} icon={countryIcons.italy.src}/>
+                <ComparisonItem country={"Italy"} percentage={56} icon={countryIcons.italy.src}/>
                 <br/>
-                <ComparisonItem country={"Spain"} percentage={50} icon={countryIcons.spain.src}/>
+                <ComparisonItem country={"Spain"} percentage={35} icon={countryIcons.spain.src}/>
             </div>
         </Stack>
     )

@@ -44,7 +44,7 @@ const Chart: React.FC<ChartPropTypes> = (props) => {
     return (
         <>
             <Stack className={styles.chartFlex} alignItems={"center"} justifyContent={"center"} direction={'column'}>
-                <Typography variant={"h4"}>
+                <Typography variant={"body2"}>
                     {props.country}
 
                     <Typography display={"flex"} alignItems={"center"} color={`${color}`} variant={"body1"}>
@@ -67,6 +67,10 @@ const Chart: React.FC<ChartPropTypes> = (props) => {
                     hideXLabel
                     hideYLabel
                     hidePoints
+                    hideLegend
+                    hideXAxis
+                    hideYAxis
+
                     margins={
                         {
                             top:0,

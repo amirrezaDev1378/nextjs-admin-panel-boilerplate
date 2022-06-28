@@ -4,29 +4,53 @@
   width: 100%;
 
   > * {
-    flex-basis:100%;
+    flex-basis: 100%;
   }
+
   @media screen and (min-width: 400px) {
     > * {
-  flex-basis: 33.33333%;
+      flex-basis: 33.33333%;
     }
   }
   @media screen and (min-width: 900px) {
     > * {
-  flex-basis: 33.33%;
+      flex-basis: 33.33%;
     }
-  }  @media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1200px) {
     > * {
-  flex-basis: 15%;
+      flex-basis: 15%;
     }
   }
 }
 
 .colorRed {
   color: #FF4B75 !important;
+  margin: 0!important;
+  @media screen and (max-width : 600px ){
+    padding: 0 15px;
+  }
+
 }
 
 .colorGreen {
   color: #00E38C !important;
+  margin: 0!important;
+  @media screen and (max-width : 600px ){
+    padding: 0 15px;
+  }
 }
 
+.statusDivider {
+  @extend .d-none, .d-lg-block;
+  transform: rotate(90deg);
+  flex-basis: 7%;
+  margin: 0 !important;
+  width: 100px;
+}
+
+.statusItem {
+  @media screen and (min-width: 1200px) {
+    height: 100px;
+  }
+}

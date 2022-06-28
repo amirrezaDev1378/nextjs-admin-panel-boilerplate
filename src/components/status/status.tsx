@@ -9,9 +9,17 @@ import {ArrowDropDown, ArrowDropUp} from "@mui/icons-material";
 const Status: NextComponentType = () => {
     return (
         <>
-            <Stack alignItems={"center"} spacing={3} justifyContent={"center"} className={styles.statusMain} direction={'row'} flexWrap={'wrap'}>
+            <Stack
+                divider={<hr className={styles.statusDivider}/>}
+                alignItems={"center"}
+                spacing={{xs: 3, lg: 0}}
+                justifyContent={"center"}
+                className={styles.statusMain}
+                direction={'row'}
+                flexWrap={'wrap'}
+            >
 
-                <Stack spacing={1} direction={"column"} alignItems={"center"}>
+                <Stack justifyContent={{lg: "space-between"}} className={styles.statusItem} spacing={1} direction={"column"} alignItems={"center"}>
                     <Typography variant={"h5"} color={"#7A819F"}>
                         BALANCE
                     </Typography>
@@ -21,18 +29,40 @@ const Status: NextComponentType = () => {
                     </Typography>
                 </Stack>
 
-                <Stack spacing={1} direction={"column"} alignItems={"center"}>
-                    <Typography alignItems={"center"} display={"flex"} flexDirection={"row"} variant={"h5"} color={"#7A819F"}>
-                        PROFITS <p className={styles.colorGreen}>56%<ArrowDropUp/></p>
+                <Stack
+                    justifyContent={{lg: "space-between"}}
+                    className={styles.statusItem}
+                    spacing={2}
+                    direction={{xs: "column", lg: "column"}}
+                    alignItems={"center"}
+                >
+                    <Typography
+                        alignItems={"center"}
+                        justifyContent={{xs: "center", lg: "space-between"}}
+                        width={"100%"}
+                        display={"flex"}
+                        flexDirection={"row"}
+                        variant={"h5"}
+                        color={"#7A819F"}
+
+                    >
+                        PROFITS <p className={styles.colorGreen}>56% <ArrowDropUp/></p>
                     </Typography>
 
                     <Typography variant={"h3"}>
-                        &952.00
+                        $952.00
                     </Typography>
                 </Stack>
 
-                <Stack spacing={1} direction={"column"} alignItems={"center"}>
-                    <Typography alignItems={"center"} display={"flex"} flexDirection={"row"} variant={"h5"} color={"#7A819F"}>
+                <Stack justifyContent={{lg: "space-between"}} className={styles.statusItem} spacing={2} direction={"column"} alignItems={"center"}>
+                    <Typography
+                        justifyContent={{xs: "center", lg: "space-between"}}
+                        width={"100%"}
+                        alignItems={"center"}
+                        display={"flex"}
+                        flexDirection={"row"}
+                        variant={"h5"}
+                        color={"#7A819F"}>
                         Losses <p className={styles.colorRed}>30% <ArrowDropDown/></p>
                     </Typography>
 
@@ -41,7 +71,7 @@ const Status: NextComponentType = () => {
                     </Typography>
                 </Stack>
 
-                <Stack spacing={1} direction={"column"} alignItems={"center"}>
+                <Stack justifyContent={{lg: "space-between"}} className={styles.statusItem} spacing={1} direction={"column"} alignItems={"center"}>
                     <Typography variant={"h5"} color={"#7A819F"}>
                         CURRENCIES
                     </Typography>

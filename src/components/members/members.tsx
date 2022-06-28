@@ -23,11 +23,11 @@ const TeamMember:React.FC<TeamMemberProps> = (props) => {
 const Members:React.FC = (props) => {
     return (
         <Stack flexBasis={{sm:"50%"}} direction={"column"}>
-            <Stack direction={"row"}>
+            <Stack padding={"5px 20px"} justifyContent={"space-between"} direction={"row"}>
                 <Typography>
                     Team Members
                 </Typography>
-                <Typography>
+                <Typography className={styles.viewAll} component={"a"} color={"primary.main"}>
                     View All
                 </Typography>
             </Stack>

@@ -74,7 +74,7 @@ const Header: NextComponentType = () => {
                         <img src={menuIcon.src} alt=""/>
                     </a>
                 </div>
-                <Typography variant={"h4"}>
+                <Typography pt={{lg:"25px"}} pl={{md:"25px"}} variant={"h4"}>
                     Dashboard
                     <Typography variant={"body1"} color={"secondary.main"}>
                         Welcome back, Andrew
